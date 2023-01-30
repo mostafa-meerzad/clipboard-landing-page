@@ -1,0 +1,31 @@
+@use "./styles/variables";
+@use "./styles/header";
+@use "./styles/snippetsTrack";
+@use "./styles/clipboardAccess";
+@use "./styles/supperChargeWorkflow";
+@use "./styles/download";
+@use "./styles/footer";
+
+
+*{
+    box-sizing: border-box;
+    position: relative;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+body{
+font-family: "Bai Jamjuree", sans-serif;
+// font-family:  sans-serif;
+// padding: 1rem;    
+padding: 0;
+margin: 0;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}

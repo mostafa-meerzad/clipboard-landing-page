@@ -1,0 +1,23 @@
+@use "./variables";
+
+.footer{
+    text-align: center;
+    background-color:variables.$light-grayish-blue;
+    padding-block: 2rem 4rem ;
+    & #logo{
+        scale: .45;
+    }
+
+    &__link{
+        color: variables.$dark-grayish-blue;
+        margin-block-end:1.6rem;
+    }
+
+    &__social{
+        margin-block-start: 3.5rem;
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+}

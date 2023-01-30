@@ -1,0 +1,32 @@
+@use "./variables";
+@use "./mixins";
+
+.snippets-track{
+    text-align: center;
+    padding: variables.$container-padding;
+    margin-block-end: 3rem;
+    &__title{
+        color: variables.$dark-grayish-blue;
+        font-size: 1.6rem;
+    }
+    &__desc{
+        @include mixins.desc;
+    }
+    &__img{
+        width: 100%;
+    }
+
+  
+    &__option{
+        margin-block:3rem;
+    }
+
+    &__option-title{
+        color: variables.$dark-grayish-blue;
+        margin-block:1rem
+    }
+    &__option-desc{
+        @include mixins.desc;
+       
+    }
+}

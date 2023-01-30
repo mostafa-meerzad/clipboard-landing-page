@@ -1,0 +1,20 @@
+@use "./variables";
+@use "./mixins";
+
+.clipboard-access{
+    // border: 2px solid red;
+padding: variables.$container-padding;
+text-align: center;
+
+
+&__title{
+    color: variables.$dark-grayish-blue;
+    font-size: 1.6rem;
+}
+&__desc{
+    @include mixins.desc;
+}
+&__img{
+    margin-block: 3rem;
+}
+}

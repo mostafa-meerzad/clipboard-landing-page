@@ -1,0 +1,28 @@
+@use "./variables";
+@use "./mixins";
+
+.download{
+    padding: variables.$container-padding;
+    text-align: center;
+
+    &__title{
+        @include mixins.title;
+    }
+    &__desc{
+        @include mixins.desc;
+        margin-block: 1.5rem 2rem;
+    }
+
+    &__btn--ios{
+        @include mixins.btn(variables.$strong-cyan);
+        background-color: variables.$strong-cyan;
+        
+
+    }
+    &__btn--mac{
+        @include mixins.btn(variables.$light-blue);
+        background-color: variables.$light-blue;
+        
+
+    }
+}

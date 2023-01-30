@@ -1,0 +1,31 @@
+@use "./variables";
+@use "./mixins";
+.header {
+  text-align: center;
+  padding-block: 7rem;
+  padding-inline: variables.$container-padding;
+  background-image: url("./bg-header-mobile.png");
+  background-repeat: no-repeat;
+  background-position: center 0;
+  background-size: cover;
+
+  &__title {
+    padding-top: 3rem;
+    font-weight: 600;
+    color: variables.$dark-grayish-blue;
+  }
+  &__desc {
+    @include mixins.desc;
+    width: 88%;
+    margin-inline: auto;
+  }
+
+  &__btn--ios {
+    @include mixins.btn(variables.$strong-cyan);
+    background-color: variables.$strong-cyan;
+  }
+  &__btn--mac {
+    @include mixins.btn(variables.$light-blue);
+    background-color: variables.$light-blue;
+  }
+}
