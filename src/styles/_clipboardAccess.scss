@@ -1,24 +1,34 @@
 @use "./variables";
 @use "./mixins";
 
-.clipboard-access{
-    // border: 2px solid red;
-padding: variables.$container-padding;
-text-align: center;
+.clipboard-access {
+  padding: variables.$container-padding;
+  text-align: center;
 
-
-&__title{
-    color: variables.$dark-grayish-blue;
-    font-size: 1.6rem;
-}
-&__desc{
+  &__title {
+    @include mixins.title;
+  }
+  &__desc {
     @include mixins.desc;
-}
-&__img{
+  }
+  &__img {
     margin-block: 3rem;
-}
+  }
 
-@media all and (min-width:variables.$tablet-view) {
+  @media all and (min-width: variables.$tablet-view) {
     padding-inline: variables.$container-padding-tablet;
-}
+  }
+
+  @media all and (min-width: variables.$desktop-view) {
+    // make padding-inline 0 in order to set image size properly
+    padding-inline: 0;
+    &__title,
+    &__desc {
+      padding-inline: variables.$container-padding-desktop;
+    }
+
+    &__img{
+        max-width: 60rem;
+    }
+  }
 }

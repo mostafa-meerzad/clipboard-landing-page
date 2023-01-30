@@ -1,67 +1,86 @@
 @use "./variables";
 @use "./mixins";
 
-.supper-charge-workflow{
-    padding: variables.$container-padding;
+.supper-charge-workflow {
+  padding: variables.$container-padding;
 
-text-align: center;
-    &__title{
-        @include mixins.title;
-        padding: 0 3rem;
-    
+  text-align: center;
+  &__title {
+    @include mixins.title;
+    padding: 0 3rem;
+  }
+  &__desc {
+    @include mixins.desc;
+  }
+
+  &__option {
+    margin: 4rem 0;
+
+    & svg {
+      margin-block: 1rem;
     }
-    &__desc{
-        @include mixins.desc;
+  }
+  &__option-title {
+    @include mixins.title;
+    font-size: 1.3rem;
+  }
+  &__option-desc {
+    @include mixins.desc;
+  }
+
+  &__brand {
+    width: 40%;
+    max-width: 8rem;
+    height: auto;
+    object-fit: scale-down;
+    margin: 4rem auto;
+
+    // adjust the size of brand-images manually (they are images not svg) because of that, if I leave them as they are they will not match the design file
+    &-IBM {
+      width: 85%;
+    }
+    &-HP {
+      width: 80%;
+    }
+    &-Vector-Graphics {
+      width: 70%;
+    }
+  }
+
+  @media all and (min-width: variables.$tablet-view) {
+    padding-inline: variables.$container-padding-tablet;
+
+    &__option {
+      width: 60%;
+      margin-inline: auto;
     }
 
-    &__option{
-        // border: 2px solid red;
-        margin: 4rem 0;
+    &__brand {
+      max-width: 10rem;
+    }
+  }
 
-        & svg{
-            margin-block: 1rem;
-            // border: 2px solid red
-        }
-    }
-    &__option-title{
-        @include mixins.title;
-        font-size: 1.3rem;
-    }
-    &__option-desc{
-        @include mixins.desc;
+  @media all and (min-width: variables.$desktop-view) {
+    padding: 0;
+    &__title,
+    &__desc {
+      padding-inline: variables.$container-padding-desktop;
     }
 
-
-    &__brand{
-        width: 40%;
-        max-width: 8rem;
-        height: auto;
-        object-fit: scale-down;
-        margin: 4rem auto;
-
-        // adjust the size of brand-images manually (they are images not svg) because of that, if I leave them as they are they will not match the design file
-        &-IBM{
-            width: 85%;
-        }
-        &-HP{
-            width: 80%;
-        }
-        &-Vector-Graphics{
-            width: 70%;
-        }
+    &__options-container,
+    &__brands-container {
+      margin-inline: 10vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
     }
-
-    @media all and (min-width:variables.$tablet-view) {
-        
-        padding-inline: variables.$container-padding-tablet;
-
-        &__option{
-            width: 60%;
-            margin-inline:auto;
-        }
-
-        &__brand{
-            max-width: 10rem;
-        }
+    &__option {
+      width: 25rem;
+      max-width: 30rem;
     }
+    &__option-title {
+      font-size: 1.4rem;
+    }
+  }
 }

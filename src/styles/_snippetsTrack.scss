@@ -1,42 +1,70 @@
 @use "./variables";
 @use "./mixins";
 
-.snippets-track{
-    text-align: center;
-    padding: variables.$container-padding;
-    margin-block-end: 3rem;
-    &__title{
-        color: variables.$dark-grayish-blue;
-        font-size: 1.6rem;
+.snippets-track {
+  text-align: center;
+  padding: variables.$container-padding;
+  margin-block-end: 3rem;
+  &__title {
+    color: variables.$dark-grayish-blue;
+    font-size: 1.6rem;
+    @include mixins.title;
+  }
+  &__desc {
+    @include mixins.desc;
+  }
+  &__img {
+    width: 100%;
+    margin-block: 3rem;
+  }
+
+  &__option {
+    margin-block: 3rem;
+  }
+
+  &__option-title {
+    color: variables.$dark-grayish-blue;
+    margin-block: 1rem;
+  }
+  &__option-desc {
+    @include mixins.desc;
+  }
+
+  @media all and (min-width: variables.$tablet-view) {
+    padding-inline: variables.$container-padding-tablet;
+
+    &__option {
+      width: 65%;
+      margin-inline: auto;
     }
-    &__desc{
-        @include mixins.desc;
-    }
-    &__img{
-        width: 100%;
-        margin-block: 3rem;
+  }
+  @media all and (min-width: variables.$desktop-view) {
+    padding-inline: 0;
+
+    &__title,
+    &__desc {
+      padding-inline: variables.$container-padding-desktop;
     }
 
-  
-    &__option{
-        margin-block:3rem;
+    &__img {
+      height: 40rem;
+      width: auto;
+      left: -2vw;
     }
 
-    &__option-title{
-        color: variables.$dark-grayish-blue;
-        margin-block:1rem
+    &__options {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin-block-start: 2rem;
     }
-    &__option-desc{
-        @include mixins.desc;
-       
+    &__option {
+      width: 60%;
+      text-align: start;
     }
 
-    @media all and (min-width:variables.$tablet-view) {
-        padding-inline: variables.$container-padding-tablet;
-
-        &__option{
-            width: 65%;
-            margin-inline: auto;
-        }
+    &__option-title {
+      font-size: 1.5rem;
     }
+  }
 }

@@ -10,6 +10,8 @@
   background-size: cover;
 
   &__title {
+    @include mixins.title;
+    font-size: 2.35rem;
     padding-top: 3rem;
     font-weight: 600;
     color: variables.$dark-grayish-blue;
@@ -31,7 +33,19 @@
 
   @media all and (min-width:variables.$tablet-view) {
     padding-inline: variables.$container-padding-tablet;
-    // padding: variables.$container-padding;
     background-image: url("./bg-header-desktop.png");
+    background-size: contain;
+  }
+
+  @media all and (min-width:variables.$desktop-view) {
+    padding-inline: variables.$container-padding-desktop;
+
+    &__title{
+      font-size: 2.8rem;
+    }
+    &__desc{
+      font-size: 18px;
+      margin-block:-.5rem 2.5rem
+    }
   }
 }

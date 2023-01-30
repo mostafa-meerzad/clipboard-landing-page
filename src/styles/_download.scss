@@ -29,4 +29,8 @@
     @media all and (min-width:variables.$tablet-view) {
         padding-inline:variables.$container-padding-tablet;
     }
+
+    @media all and (min-width:variables.$desktop-view) {
+        padding-inline: variables.$container-padding-desktop;
+    }
 }
