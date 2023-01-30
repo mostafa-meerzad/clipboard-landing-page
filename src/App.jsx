@@ -6,6 +6,7 @@ import SupperChargeWorkflow from './components/SupperChargeWorkflow';
 import Download from './components/Download';
 import Footer from './components/Footer';
 
+import "./styles.css"
 
 const App = () => {
   return (
