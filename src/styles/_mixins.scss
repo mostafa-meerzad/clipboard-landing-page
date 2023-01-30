@@ -20,6 +20,11 @@
     font-size: 1.05rem;
     box-shadow: inset 0 -1px 2px 0 hsla(0, 0%, 0%, 0.589), 0 15px 10px -10px $shadow;
 
+    @media all and (min-width:variables.$tablet-view) {
+        width: 13rem;
+        margin-inline: 1rem;
+    }
+
 }
 
 @mixin title{

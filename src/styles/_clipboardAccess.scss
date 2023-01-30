@@ -17,4 +17,8 @@ text-align: center;
 &__img{
     margin-block: 3rem;
 }
+
+@media all and (min-width:variables.$tablet-view) {
+    padding-inline: variables.$container-padding-tablet;
+}
 }

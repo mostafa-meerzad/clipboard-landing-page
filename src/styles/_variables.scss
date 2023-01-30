@@ -3,8 +3,9 @@
 
 // The designs were created to the following widths:
 
-// - Mobile: 375px
-// - Desktop: 1440px
+$mobile-view: 375px;
+$tablet-view: 768px;
+$desktop-view: 1440px;
 
 // ## Colors
 
@@ -34,3 +35,9 @@ $white:hsl(360, 100%, 100%);
 
 
 $container-padding:2rem;
+$container-padding-tablet:8rem;
+
+// @media all and (min-width:$tablet-view){
+    // $container-padding:10rem;
+
+// }

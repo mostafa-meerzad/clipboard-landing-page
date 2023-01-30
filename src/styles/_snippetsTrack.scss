@@ -14,6 +14,7 @@
     }
     &__img{
         width: 100%;
+        margin-block: 3rem;
     }
 
   
@@ -28,5 +29,14 @@
     &__option-desc{
         @include mixins.desc;
        
+    }
+
+    @media all and (min-width:variables.$tablet-view) {
+        padding-inline: variables.$container-padding-tablet;
+
+        &__option{
+            width: 65%;
+            margin-inline: auto;
+        }
     }
 }

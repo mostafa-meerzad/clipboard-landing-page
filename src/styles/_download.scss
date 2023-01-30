@@ -25,4 +25,8 @@
         
 
     }
+
+    @media all and (min-width:variables.$tablet-view) {
+        padding-inline:variables.$container-padding-tablet;
+    }
 }

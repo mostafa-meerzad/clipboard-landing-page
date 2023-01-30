@@ -30,6 +30,12 @@
   box-shadow: inset 0 -1px 2px 0 hsla(0deg, 0%, 0%, 0.589), 0 15px 10px -10px hsl(171deg, 66%, 44%);
   background-color: hsl(171deg, 66%, 44%);
 }
+@media all and (min-width: 768px) {
+  .header__btn--ios {
+    width: 13rem;
+    margin-inline: 1rem;
+  }
+}
 .header__btn--mac {
   width: 100%;
   height: 3rem;
@@ -40,6 +46,18 @@
   font-size: 1.05rem;
   box-shadow: inset 0 -1px 2px 0 hsla(0deg, 0%, 0%, 0.589), 0 15px 10px -10px hsl(233deg, 100%, 69%);
   background-color: hsl(233deg, 100%, 69%);
+}
+@media all and (min-width: 768px) {
+  .header__btn--mac {
+    width: 13rem;
+    margin-inline: 1rem;
+  }
+}
+@media all and (min-width: 768px) {
+  .header {
+    padding-inline: 8rem;
+    background-image: url("./bg-header-desktop.png");
+  }
 }
 
 .snippets-track {
@@ -59,6 +77,7 @@
 }
 .snippets-track__img {
   width: 100%;
+  margin-block: 3rem;
 }
 .snippets-track__option {
   margin-block: 3rem;
@@ -71,6 +90,15 @@
   color: hsl(201deg, 11%, 66%);
   font-size: 0.97rem;
   line-height: 1.5rem;
+}
+@media all and (min-width: 768px) {
+  .snippets-track {
+    padding-inline: 8rem;
+  }
+  .snippets-track__option {
+    width: 65%;
+    margin-inline: auto;
+  }
 }
 
 .clipboard-access {
@@ -88,6 +116,11 @@
 }
 .clipboard-access__img {
   margin-block: 3rem;
+}
+@media all and (min-width: 768px) {
+  .clipboard-access {
+    padding-inline: 8rem;
+  }
 }
 
 .supper-charge-workflow {
@@ -137,6 +170,18 @@
 .supper-charge-workflow__brand-Vector-Graphics {
   width: 70%;
 }
+@media all and (min-width: 768px) {
+  .supper-charge-workflow {
+    padding-inline: 8rem;
+  }
+  .supper-charge-workflow__option {
+    width: 60%;
+    margin-inline: auto;
+  }
+  .supper-charge-workflow__brand {
+    max-width: 10rem;
+  }
+}
 
 .download {
   padding: 2rem;
@@ -163,6 +208,12 @@
   box-shadow: inset 0 -1px 2px 0 hsla(0deg, 0%, 0%, 0.589), 0 15px 10px -10px hsl(171deg, 66%, 44%);
   background-color: hsl(171deg, 66%, 44%);
 }
+@media all and (min-width: 768px) {
+  .download__btn--ios {
+    width: 13rem;
+    margin-inline: 1rem;
+  }
+}
 .download__btn--mac {
   width: 100%;
   height: 3rem;
@@ -173,6 +224,17 @@
   font-size: 1.05rem;
   box-shadow: inset 0 -1px 2px 0 hsla(0deg, 0%, 0%, 0.589), 0 15px 10px -10px hsl(233deg, 100%, 69%);
   background-color: hsl(233deg, 100%, 69%);
+}
+@media all and (min-width: 768px) {
+  .download__btn--mac {
+    width: 13rem;
+    margin-inline: 1rem;
+  }
+}
+@media all and (min-width: 768px) {
+  .download {
+    padding-inline: 8rem;
+  }
 }
 
 .footer {

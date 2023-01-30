@@ -50,4 +50,18 @@ text-align: center;
             width: 70%;
         }
     }
+
+    @media all and (min-width:variables.$tablet-view) {
+        
+        padding-inline: variables.$container-padding-tablet;
+
+        &__option{
+            width: 60%;
+            margin-inline:auto;
+        }
+
+        &__brand{
+            max-width: 10rem;
+        }
+    }
 }

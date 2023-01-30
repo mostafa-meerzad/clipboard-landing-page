@@ -28,4 +28,10 @@
     @include mixins.btn(variables.$light-blue);
     background-color: variables.$light-blue;
   }
+
+  @media all and (min-width:variables.$tablet-view) {
+    padding-inline: variables.$container-padding-tablet;
+    // padding: variables.$container-padding;
+    background-image: url("./bg-header-desktop.png");
+  }
 }
