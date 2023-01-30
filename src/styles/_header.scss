@@ -31,21 +31,21 @@
     background-color: variables.$light-blue;
   }
 
-  @media all and (min-width:variables.$tablet-view) {
+  @media all and (min-width: variables.$tablet-view) {
     padding-inline: variables.$container-padding-tablet;
     background-image: url("./bg-header-desktop.png");
     background-size: contain;
   }
 
-  @media all and (min-width:variables.$desktop-view) {
+  @media all and (min-width: variables.$desktop-view) {
     padding-inline: variables.$container-padding-desktop;
 
-    &__title{
+    &__title {
       font-size: 2.8rem;
     }
-    &__desc{
+    &__desc {
       font-size: 18px;
-      margin-block:-.5rem 2.5rem
+      margin-block: -0.5rem 2.5rem;
     }
   }
 }

@@ -1,5 +1,6 @@
 import React, { useId } from "react";
 import img from "../assets/image-computer.png";
+import { motion } from "framer-motion";
 
 const options = [
   {
@@ -29,15 +30,27 @@ const SnippetsTrack = () => {
         iOS apps will help you organize everything.
       </p>
       <div className="snippets-track__options">
-        <img src={img} alt="" className="snippets-track__img" />
+        <motion.img
+          initial={{ x: -100 }}
+          whileInView={{ x: 0 }}
+          transition={{ duration: 0.3 }}
+          src={img}
+          alt=""
+          className="snippets-track__img"
+        />
 
         <ul className="snippets-track__options-container">
           {options.map(({ title, desc }, index) => {
             return (
-              <li className="snippets-track__option" key={index}>
+              <motion.li
+                initial={{ x: 200 }}
+                whileInView={{ x: 0 }}
+                className="snippets-track__option"
+                key={index}
+              >
                 <h3 className="snippets-track__option-title">{title}</h3>
                 <p className="snippets-track__option-desc">{desc}</p>
-              </li>
+              </motion.li>
             );
           })}
         </ul>

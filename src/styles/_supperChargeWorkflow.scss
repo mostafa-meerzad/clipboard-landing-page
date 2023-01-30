@@ -3,7 +3,7 @@
 
 .supper-charge-workflow {
   padding: variables.$container-padding;
-
+  overflow-x: hidden;
   text-align: center;
   &__title {
     @include mixins.title;

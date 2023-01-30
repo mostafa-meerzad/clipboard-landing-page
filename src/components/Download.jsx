@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const Download = () => {
   return (
@@ -9,12 +10,18 @@ const Download = () => {
         iCloud and you’re ready to start adding to your clipboard.
       </p>
 
-      <button className="download__btn download__btn--ios">
+      <motion.button
+        whileTap={{ scale: 0.95 }}
+        className="download__btn download__btn--ios"
+      >
         Download for iOS
-      </button>
-      <button className="download__btn download__btn--mac">
+      </motion.button>
+      <motion.button
+        whileTap={{ scale: 0.95 }}
+        className="download__btn download__btn--mac"
+      >
         Download for Mac
-      </button>
+      </motion.button>
     </section>
   );
 };

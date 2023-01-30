@@ -1,5 +1,6 @@
 import React from "react";
 import { Logo, Facebook, Instagram, Twitter } from "../icons";
+import { motion } from "framer-motion";
 
 const socialMedia = [
   {
@@ -32,26 +33,50 @@ const links = [
     link: "Install Guide"
   }
 ];
+
+const linksContainerVariants = {
+  hidden: {},
+  visible: {}
+};
+const linksVariants = {
+  hidden: { scale: 0.3 },
+  visible: { scale: 1 }
+};
 const Footer = () => {
   return (
     <footer className="footer">
       <Logo />
-      <ul className="footer__links">
+      <motion.ul
+        variants={linksContainerVariants}
+        initial={"hidden"}
+        whileInView={"visible"}
+        transition={{ staggerChildren: 0.1 }}
+        className="footer__links"
+      >
         {links.map(({ link }, index) => {
           return (
-            <li className="footer__link" key={index}>
+            <motion.li
+              variants={linksVariants}
+              className="footer__link"
+              key={index}
+            >
               {link}
-            </li>
+            </motion.li>
           );
         })}
-      </ul>
+      </motion.ul>
 
       <ul className="footer__social">
         {socialMedia.map(({ link, img }, index) => {
           return (
-            <li key={index} className="footer__social-link">
+            <motion.li
+              initial={{ scale: 0.3 }}
+              whileInView={{ scale: 1 }}
+              key={index}
+              className="footer__social-link"
+            >
               <a href={link}>{img}</a>
-            </li>
+            </motion.li>
           );
         })}
       </ul>

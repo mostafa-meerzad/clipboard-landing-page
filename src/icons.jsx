@@ -1,9 +1,28 @@
+import { motion } from "framer-motion";
+
 const Logo = () => {
   return (
     <svg id="logo" width="125" height="125" xmlns="http://www.w3.org/2000/svg">
       <g stroke="#26BBA4" strokeWidth="10" fill="none" fillRule="evenodd">
-        <circle cx="62.5" cy="62.5" r="57.5" />
-        <path
+        <motion.circle
+          initial={{ strokeDasharray: 180, strokeDashoffset: 180 }}
+          animate={{
+            strokeDasharray: 365,
+            strokeDashoffset: 0,
+            transition: { duration: 1 }
+          }}
+          cx="62.5"
+          cy="62.5"
+          r="57.5"
+        />
+        <motion.path
+          initial={{ strokeDasharray: 170, strokeDashoffset: 170, rotate: 0 }}
+          animate={{
+            strokeDasharray: 170,
+            strokeDashoffset: 0,
+            transition: { duration: 1.5, ease: "easeInOut" }
+          }}
+          id="c-logo"
           d="M85.481 85.481c-12.692 12.692-33.27 12.692-45.962 0s-12.692-33.27 0-45.962 33.27-12.692 45.962 0"
           strokeLinecap="round"
         />

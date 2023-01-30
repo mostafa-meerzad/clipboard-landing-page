@@ -1,4 +1,5 @@
 import { Logo } from "../icons";
+import { motion } from "framer-motion";
 
 const Header = () => {
   return (
@@ -9,8 +10,18 @@ const Header = () => {
         Clipboard allows you to track and organize everything you copy.
         Instantly access your clipboard on all your devices.
       </p>
-      <button className="header__btn header__btn--ios">Download for iOS</button>
-      <button className="header__btn header__btn--mac">Download for Mac</button>
+      <motion.button
+        whileTap={{ scale: 0.95 }}
+        className="header__btn header__btn--ios"
+      >
+        Download for iOS
+      </motion.button>
+      <motion.button
+        whileTap={{ scale: 0.95 }}
+        className="header__btn header__btn--mac"
+      >
+        Download for Mac
+      </motion.button>
     </header>
   );
 };

@@ -1,5 +1,6 @@
 import React from "react";
 import img from "../assets/image-devices.png";
+import { motion } from "framer-motion";
 
 const ClipboardAccess = () => {
   return (
@@ -9,7 +10,13 @@ const ClipboardAccess = () => {
         Whether you’re on the go, or at your computer, you can access all your
         Clipboard snippets in a few simple clicks.
       </p>
-      <img src={img} alt="" className="clipboard-access__img" />
+      <motion.img
+        initial={{ x: 100 }}
+        whileInView={{ x: 0 }}
+        src={img}
+        alt=""
+        className="clipboard-access__img"
+      />
     </section>
   );
 };
