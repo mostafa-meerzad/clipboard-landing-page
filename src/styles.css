@@ -466,6 +466,8 @@ body {
   font-family: "Bai Jamjuree", sans-serif;
   padding: 0;
   margin: 0;
+}
+body > * {
   overflow-x: hidden;
 }
 
